@@ -11,8 +11,6 @@
     v-btn.mr-2.menu-option(plain @click="handlerFilter('7')") Switch
     v-divider(vertical inset)
     v-btn.mr-2.menu-option(plain @click="handlerFilter('1')") PC
-    v-divider(vertical inset)
-    v-btn.mr-2.menu-option(plain @click="goTo404") Super Nintendo
     v-spacer
     v-btn(icon)
       v-icon mdi-magnify
@@ -40,7 +38,7 @@ export default {
   methods: {
     ...mapActions('GamesStore', ['getByPlatform']),
     goTo404 () {
-      this.$router.push({ path: '/404'})
+      this.$router.push({ name: 'NotFound'})
     },
     handlerFilter (platform) {
       this.getByPlatform(platform)

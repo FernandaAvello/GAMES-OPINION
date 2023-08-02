@@ -33,7 +33,7 @@ const routes = [
     component: ProfileView
   },
   {
-    path: '/404',
+    path: '/:catchAll(.*)',
     component: NotFound
   }
 ]
